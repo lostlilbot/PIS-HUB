@@ -1,6 +1,7 @@
 package com.pishub.app.data.repository
 
 import com.google.firebase.database.DatabaseReference
+import com.pishub.app.data.local.AnnouncementDao
 import com.pishub.app.data.local.MessageDao
 import com.pishub.app.data.model.Announcement
 import com.pishub.app.data.model.Message
@@ -9,7 +10,7 @@ import kotlinx.coroutines.tasks.await
 
 class CommunicationRepository(
     private val messageDao: MessageDao,
-    private val announcementDao: MessageDao,
+    private val announcementDao: AnnouncementDao,
     private val messagesRef: DatabaseReference,
     private val announcementsRef: DatabaseReference
 ) {

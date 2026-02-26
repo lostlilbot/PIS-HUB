@@ -1,13 +1,13 @@
 package com.pishub.app.data.repository
 
 import com.google.firebase.database.DatabaseReference
-import com.pishub.app.data.local.LibraryDao
+import com.pishub.app.data.local.EmergencyLessonDao
 import com.pishub.app.data.model.EmergencyLesson
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.tasks.await
 
 class EmergencyRepository(
-    private val emergencyLessonDao: LibraryDao,
+    private val emergencyLessonDao: EmergencyLessonDao,
     private val firebaseRef: DatabaseReference
 ) {
     fun getEmergencyLessonsByClass(classId: String): Flow<List<EmergencyLesson>> {

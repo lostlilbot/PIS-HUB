@@ -33,8 +33,10 @@ abstract class PISHubDatabase : RoomDatabase() {
     abstract fun gradeDao(): GradeDao
     abstract fun assignmentDao(): AssignmentDao
     abstract fun messageDao(): MessageDao
+    abstract fun announcementDao(): AnnouncementDao
     abstract fun eventDao(): EventDao
     abstract fun libraryDao(): LibraryDao
+    abstract fun emergencyLessonDao(): EmergencyLessonDao
 
     companion object {
         @Volatile
